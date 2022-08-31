@@ -1,0 +1,349 @@
+/* new font */
+@font-face {
+  src: url("/static/font/LinLibertine_R.ttf");
+  font-family:"linber";
+}
+
+@font-face {
+  src: url("/static/font/LinLibertine_RZ.ttf");
+  font-family:"linberB";
+}
+@font-face{
+  font-family: "Kotra-font";
+  src: url("/static/font/KOTRA_GOTHIC.ttf");
+}
+
+html{
+  margin: 0px auto;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  scroll-behavior: smooth;
+}
+body{
+  font-family: "linber, linberB, Kotra-font";
+  margin: 0px auto;
+}
+header{
+  margin: auto;
+  padding: auto;
+  min-height: 20vh;
+}
+footer{
+  font-family: "karma", sans-serif
+}
+a,li {
+    text-decoration: none;
+    color: black;
+     list-style: none;
+}
+@media screen and (max-width:768px) {
+  .Menu_bar{
+      flex-direction: column;
+      padding: 8px 24px;
+      float: none;
+  }
+}
+/*header영역 Logo*/
+.Menu_bar {
+    display: flex;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 2px;
+    position:fixed;
+    z-index: 1;
+    background-color: #f8f9fa;
+    margin: auto;
+    font-family: "karma", sans-serif
+    
+}
+#Logo_name:hover {
+    cursor: pointer;
+}
+#Logo_name {
+    padding-left: 20px;
+    font-size: 20px;
+    padding-top: 5px;
+    width: 100%;
+    margin-bottom: 3px;
+    font-family: "karma", sans-serif;
+    font-weight: 600;
+}
+/*Header 영역 메뉴*/
+
+.dropdown{
+  position : relative;
+  display : inline-block;
+}
+
+.dropbtn_icon{
+  font-family : 'Material Icons';
+}
+.dropbtn{
+  background-color: #f5f5f5;
+  font-weight: 400;
+  color : rgb(37, 37, 37);
+  padding : 12px;
+  width :200px;
+  text-align: center;
+  cursor : pointer;
+  font-size : 12px;
+}
+.dropdown-content{
+  display : none;
+  position : absolute;
+  z-index : 1; /*다른 요소들보다 앞에 배치*/
+  font-weight: 400;
+  background-color: #f9f9f9;
+  min-width : 200px;
+  text-align: center;
+}
+
+.dropdown-content a{
+  display : block;
+  text-decoration : none;
+  color : rgb(37, 37, 37);
+  font-size: 12px;
+  padding : 12px 20px;
+}
+.dropbtn:hover {
+  background-color: #ececec;
+}
+.dropdown-content a:hover{
+  background-color : #ececec;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/** 소개페이지 */
+.section{
+  position: relative;
+}
+#text { color: white;}
+.wrap1{
+  padding: 12px 0px;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 100px;
+  background-color: #333;
+  color: #fff;
+}
+.w_title{text-align: center;}
+.w_subtitle{font-weight: 400;
+  font-size:1.2rem;
+text-align: center;}
+.wrap1_container{
+  height: 100%;
+  margin-top: 30px;
+  text-align: center;
+}
+.w_graytitle{
+  margin: 12px 0px;
+  color: #bdbdbd;
+}
+.row_container{
+  width: 100%;
+  margin-top: 32px;
+  text-align: center;
+  position: relative;
+}
+.iconbox{
+  display: inline-block;
+  text-align: center;
+  margin: 12px 24px;
+}
+
+.wrap2{margin-top: 100px;
+  text-align: center;
+  height: 90vh;
+
+
+  /* opacity: 0;
+  transition: all .5s ease; */
+}
+/* #wrap_event-roteteL{
+  transform: translate(100px, 0);
+}
+.wrap2.show {
+    opacity: 1;
+    transform: none;
+  } */
+  #wrap2_img{
+    padding-bottom: 77px;
+  }
+  #slidesShow{
+      border: 2px solid white;
+      border-radius: 4px;
+      position: relative;
+      width: 600px;
+      margin: 20px auto;
+      height: 459px;
+      overflow: hidden;
+  }
+  .slides{
+    height: 620px;
+    position: absolute;
+    left: 0; top: 0;
+    transition: left 0.5s ease-out;
+    padding: 0px;;/* 슬라이드할 사진과 마진 총 넓이 */ }
+    .slides li:first-child{
+    margin-left: 10px;
+    }
+    .slides li:not(:last-child){
+      float:left;
+      margin-right: 10px;
+    }
+    .slides li{
+      float: left;
+    }
+    .controller span{
+      position: absolute;
+      background-color: transparent;
+      color: black;
+      text-align: center;
+      border-radius: 50%;
+      padding: 10px 10px;
+      top: 0;
+      cursor: pointer;
+    }
+    .controller span:hover{
+      background-color: rgba(128, 128, 128, 0.11);
+    }
+    .prev {
+      margin-left: 30px;
+      left: 10px;
+    }
+    .next{
+      right: 10px;
+    }
+
+  .button{
+    background:#333;
+    color:#fff;
+    border:none;
+    border-radius: 4px;
+    position:relative;
+    height:60px;
+    font-size:1.6em;
+    padding:0 2em;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+    padding:8px 12px;
+  }
+  .button:hover{
+    background:#FFF;
+    color:black;
+  }
+  .button:before,.button:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #333;
+    transition:400ms ease all;
+  }
+  .button:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  .button:hover:before,.button:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }
+/* HOT 키워드 */
+.container {
+  display: flex;
+  justify-content: center;
+}
+.btn_wd {
+  text-align: center;
+  font-size: 1.25rem; 
+}
+.btn_link{
+  border: 2px solid white;
+  border-radius: 8px;
+  padding: 4px 8px;
+  background-color: #ececec;
+}
+.btn_active{
+  border: 2px solid white;
+  border-radius: 8px;
+  padding: 4px 8px;
+  background-color: #bdbdbd;
+}
+.w3-content{
+  height: 100vh;
+}
+
+.word_box{
+  margin-top: 12px ;
+  margin-bottom: 12px;
+  text-align: center;
+  display: inline-block;
+  width: 30vw;
+  height: 30vh;
+  border: 1px solid black;
+}
+
+.word_title{
+  display: block;
+  background-color: #ececec;
+  color: #333;
+  text-align: center;
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  height: 22px;
+}
+
+.wrap5 {
+  border: 3px solid #ddd;
+  max-width: 900px; 
+  margin: 0 auto;
+  padding: 30px 30px 10px 30px;
+  /* padding-left: 30px;
+  padding-right: 30px; */
+  text-align: center;
+  justify-content: center;
+  margin-top: 3rem;
+  border-radius: 0.5rem;
+  /* display: flex; */
+}
+
+.btn {
+  margin-bottom: 10px;
+}
+
+#info {
+  display: flow-root;
+  text-align: center;
+}
+
+/* 위에 컨테이너 이미 있지만 일단 따로 작성 */  
+.container {
+  display: flex;
+  border-radius: 0.5rem;
+  justify-content: center;
+}
+
+.option_div {
+  border-radius: 0.5rem;
+  margin-left: 244px;
+  margin-top: 35px;
+  border: 2px solid rgb(180, 180, 180); 
+  width: 350px;
+}
+
+#options {
+  margin: 5px;
+  padding: 15px 15px 0 15px;
+}
+

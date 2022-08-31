@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block title %}장르별 가사 추천{% endblock %}
+
+{% block content %}
+<div class="container-fluid pt-5 bg-dark text-white" id="info">
+    <h1>Give You Inspiration</h1>
+    <br>
+    <h4>
+        특정 장르의 노래 가사를 보고 영감을 얻으세요!
+    </h4>
+    <p>
+        많은 사람들에게 사랑을 받는 여러 노랫말이
+        당신의 작사에 도움을 주기 위해 기다립니다
+    </p>
+    <br>
+</div>
+<!-- <div class="container p-5 my-auto border shadow-sm"> -->
+<div class="wrap5">
+    <div>
+        <h4><strong>문장의 수와 길이, 원하는 장르를 선택해보세요</strong></h4>
+    </div>
+    <hr>
+    <form action="/sentence" method="POST" enctype="multipart/form-data">
+        <!-- action에 routing 정보를, 전달하는 방식 method, file을 보낼 때는 enctype="multipart/form-data" 추가 -->
+        <div class="option_div">
+            <div>
+            <div id="options">
+                <span style="padding-right: 65px;"><strong>장르 선택</strong></span>
+                <select class="form-check-label" name="genre">
+                {% for option in genre %}
+                <option value="{{option.val}}">{{option.disp}}</option>
+                {% endfor %}
+                </select>
+            </div>
+            <div id="options">
+                <span style="padding-right: 85px;"><strong>출력할 문장 수</strong></span>
+                <select name="number" id="sentence_num" >
+                    <option value="five">5</option>
+                    <option value="three" >3</option>
+                    <option value="one">1</option>
+                </select>
+            </div>
+            <div id="options">    
+            <span style="padding-right: 100px;"><strong>문장 길이</strong></span>
+            <select name="length" id="sentence_len" >
+                <option value="long">길게</option>
+                <option value="mid" >중간</option>
+                <option value="short">짧게</option>
+            </select>
+            </div>
+        <button type="submit" class="btn btn-dark" style="margin: 15px;">실행</button>
+        </div>
+        </div>
+        <br>
+        <!-- <button type="submit" class="btn btn-dark">실행</button> -->
+    </form>
+</div>
+<br><br><br><br><br><br><br><br><br><br>
+{% endblock %}

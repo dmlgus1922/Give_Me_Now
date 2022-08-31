@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% block title %}HOT 키워드 - GIVE ME NOW!{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" rel="stylesheet">
+ 
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+
+<style>
+  .w3-row-padding img {margin-bottom: 12px}
+  header{min-height: 10vh;}
+  </style>
+{% endblock %}
+
+{% block content %}
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1500px">
+
+<!-- 버튼 --> 
+  <div class="btn_wd">
+    <a href="#" button type="button" class="btn_active" style="text-decoration: none; color: #424242; ">계절별</a>
+    &nbsp;
+    <a href="{{ url_for('wordcloud2')}}" button type="button" class="btn_link" style="text-decoration: none; color: darkgray;">장르별</a>  
+  </div>
+  &nbsp;
+  &nbsp;
+
+  <!-- 이미지 자리 -->
+  <div class="row justify-content-center" style="padding-bottom: 100px ; width:1600px; height: 100vh;">
+    <div class="col-md-8">
+      <div class="word_box">
+        <a href="static\img\봄.png" data-title="봄" data-toggle="lightbox" class="col-sm-4" >
+            <img src="static\img\봄썸네일.png" class="img-fluid rounded" >
+          </a>
+            <h5 class="word_title">봄</h5>
+      </div>
+      <div class="word_box">
+        <a href="static\img\여름.png" data-title="여름" data-toggle="lightbox" class="col-sm-4" >
+            <img src="static\img\여름썸네일.png" class="img-fluid rounded" >
+          </a>
+            <h5 class="word_title">여름</h5>
+      </div>
+      <div class="word_box">
+        <a href="static\img\가을.png" data-title="가을" data-toggle="lightbox" class="col-sm-4" >
+            <img src="static\img\가을썸네일.png" class="img-fluid rounded" >
+          </a>
+            <h5 class="word_title">가을</h5>
+      </div>
+      <div class="word_box">
+        <a href="static\img\겨울.png" data-title="겨울" data-toggle="lightbox" class="col-sm-4" >
+            <img src="static\img\겨울썸네일.png" class="img-fluid rounded" >
+          </a>
+            <h5 class="word_title">겨울</h5>
+      </div>
+    </div>
+</div>
+<script>
+    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+        event.preventDefault();
+        $(this).ekkoLightbox();
+    });
+</script>
+
+  <!-- End Page Content -->
+  </div> 
+  
+{% endblock %}

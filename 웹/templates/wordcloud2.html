@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% block title %}HOT 키워드 - GIVE ME NOW!{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" rel="stylesheet">
+ 
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+
+<style>
+  .w3-row-padding img {margin-bottom: 12px}
+  header{min-height: 10vh;}
+  </style>
+{% endblock %}
+
+{% block content %}
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1500px">
+
+<!-- 버튼 -->
+<div class="btn_wd">
+  <a href="{{ url_for('wordcloud')}}" button type="button" class="btn_link" style="text-decoration: none; color: darkgray;">계절별</a>
+  &nbsp;
+  <a href="#" button type="button" class="btn_active"style="text-decoration: none; color: #424242;">장르별</a>  
+</div>
+&nbsp;
+&nbsp;
+
+<!-- 이미지 자리 -->
+<div class="row justify-content-center" style="width:1600px; height: 160vh;">
+  <div class="col-md-8">
+      <div class="word_box">
+          <a href="static\img\댄스.png" data-title="댄스" data-toggle="lightbox" class="col-sm-4" >
+              <img src="static\img\댄스썸네일.png" class="img-fluid rounded" >
+            </a>
+              <h5 class="word_title">댄스</h5>
+        </div>
+        <div class="word_box">
+          <a href="static\img\록.png" data-title="록" data-toggle="lightbox" class="col-sm-4" >
+              <img src="static\img\록썸네일.png" class="img-fluid rounded" >
+            </a>
+              <h5 class="word_title">록</h5>
+        </div>
+        <div class="word_box">
+          <a href="static\img\발라드.png" data-title="발라드" data-toggle="lightbox" class="col-sm-4" >
+              <img src="static\img\발라드썸네일.png" class="img-fluid rounded" >
+            </a>
+              <h5 class="word_title">발라드</h5>
+        </div>
+        <div class="word_box">
+          <a href="static\img\알앤비.png" data-title="R&B" data-toggle="lightbox" class="col-sm-4" >
+              <img src="static\img\알앤비썸네일.png" class="img-fluid rounded" >
+            </a>
+              <h5 class="word_title">R&B</h5>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="word_box">
+          <a href="static\img\인디.png" data-title="인디" data-toggle="lightbox" class="col-sm-4" >
+              <img src="static\img\인디썸네일.png" class="img-fluid rounded" >
+            </a>
+              <h5 class="word_title">인디</h5>
+        </div>
+        <div class="word_box">
+          <a href="static\img\트로트.png" data-title="트로트" data-toggle="lightbox" class="col-sm-4" >
+              <img src="static\img\트로트썸네일.png" class="img-fluid rounded" >
+            </a>
+              <h5 class="word_title">트로트</h5>
+        </div>
+        <div class="word_box">
+          <a href="static\img\포크.png" data-title="포크" data-toggle="lightbox" class="col-sm-4" >
+              <img src="static\img\포크썸네일.png" class="img-fluid rounded" >
+            </a>
+              <h5 class="word_title">포크</h5>
+        </div>
+        <div class="word_box">
+          <a href="static\img\힙합.png" data-title="힙합" data-toggle="lightbox" class="col-sm-4" >
+              <img src="static\img\힙합썸네일.png" class="img-fluid rounded" >
+            </a>
+              <h5 class="word_title">힙합</h5>
+        </div>
+    </div>
+  </div>
+<script>
+  $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+      event.preventDefault();
+      $(this).ekkoLightbox();
+  });
+</script>
+<!-- End Page Content -->
+  </div> 
+  
+{% endblock %}

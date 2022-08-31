@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block title %}서비스 소개 - GIVE ME NOW!{% endblock %}
+
+{% block content %}
+<section class="section">
+    <div class="wrap1" id="section1">
+        <h1 class="w_title" style="margin-top: 36px;">GIVE ME NOW!</h1><br />
+        <h4 class="w_title">작사가 한 층 더 쉬워집니다</h4>
+        <p class="w_subtitle" style="margin-bottom: 24px;"><strong>GIVE ME NOW!</strong>는 <strong> 작사를 처음 시작 </strong> 하시는분들에게 도움이 되는 정보를 <strong>
+                제공</strong>하고 있습니다</p>
+    </div>
+    <div class="wrap1_container">
+        <div class="w_title">
+            <h3> 떠오르는 <br> 가사를 적어보세요</h3>
+        </div>
+        <div class="w_graytitle">
+            <h5>당신의 처음을 GIVE ME NOW!와 함께 하세요</h5>
+        </div>
+    </div>
+    <div class="row_container">
+        <div class="iconbox">
+            <img src="static\img\작사돕기아이콘.jpg" alt="아이콘">
+            <h5>시작이 막막할 때</h5>
+            <h5 class="w_graytitle">단어가 떠오르지 않으시나요? <br>GIVE ME NOW!를 이용해보세요</h5>
+        </div>
+        <div class="iconbox">
+            <img src="static\img\헤드셋아이콘.jpg" alt="헤드셋아이콘">
+            <h5>취미가 없을 때</h5>
+            <h5 class="w_graytitle"> GIVE ME NOW!를 통해 <br> 나만의 작품을 만들 수 있어요</h5>
+        </div>
+    </div>
+</section>
+<section class="section">
+    <div class="wrap2" id="section2">
+        <div id="slidesShow">
+            <ul class="slides">
+                <li>
+                    <h3 id="wrap_event-roteteL"><strong>장르별 가사추천</strong>을 경험해보세요
+                    </h3>
+                    <img src="static\img\문장보기시연.gif" alt="시연" id="wrap2_img">
+                </li>
+                <li>
+                    <h3 id="wrap_event-roteteL"><strong>나만의 가사 추천</strong>을 경험해보세요
+                    </h3>
+                    <img src="static\img\문장만들기시연.gif" alt="시연" id="wrap2_img">
+                </li>
+            </ul>
+            <p class="controller">
+                <!-- &lang: 왼쪽 방향 화살표
+                &rang: 오른쪽 방향 화살표 -->
+                <span class="prev">&lang;</span>
+                <span class="next">&rang;</span>
+            </p>
+        </div>
+        <div class="button_box" id="wrap_event-roteteL">
+            <a class="button" href="/sentence" data-text="button" data-transition="slidefade"
+                id="wrap_event-roteteL">GIVE ME NOW! 시작하기</a>
+        </div>
+    </div>
+</section>
+<script src="{{ url_for('static', filename='js/js.js', q=2) }}"></script>
+{% endblock %}

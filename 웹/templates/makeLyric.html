@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block title %}나만의 가사 만들기{% endblock %}
+
+{% block content %}
+<div class="container-fluid pt-5 bg-dark text-white" id="info">
+    <h1>Make Your Own Lyrics</h1>
+    <br>
+    <h4>
+        작사하는 데에 어려움을 느끼고 있나요?
+    </h4>
+    <p>
+        GIVE ME NOW!는 적절한 문장을 추천해드립니다
+    </p>
+    <br>
+</div>
+<div class="wrap5">
+    <h4>
+        <strong>문장 혹은 단어를 입력해보세요</strong>
+    </h4>
+    <p>아직 많이 미숙하지만 GIVE ME NOW!가 어울리는 문장을 드릴거예요</p>
+    <hr>
+    <form action="/makeLyric" method="POST" enctype="multipart/form-data">
+        <!-- action에 routing 정보를, 전달하는 방식 method, file을 보낼 때는 enctype="multipart/form-data" 추가 -->
+        <!-- <table class="table table-borderless"> -->
+        <div style="margin-bottom: 25px;" class="option_div">
+            <div style="text-align: center;">
+                <legend style="margin-top: 10px;">문장(단어) 입력</legend>
+                <textarea name="sentence" id="sentence" cols="33.5" rows="2" placeholder="단어 혹은 한 문장을 입력해주세요."></textarea>
+            </div>
+            <div style="border: 1px solid #ddd; margin-top: 10px;">
+                <!-- <div style="margin-left: 30px;"> -->
+                    <!-- <div style="width: fit-content;"> -->
+                    <div style="margin: 10px;">
+                    <label style="width: fit-content; margin-left: 10px;">길이 선택
+                    <select name="length" id="sentence_len">
+                        <option value="long">길게</option>
+                        <option value="mid" >중간</option>
+                        <option value="short">짧게</option>
+                    </select>
+                    </label>
+                    <!-- </div> -->
+                    
+                    <button type="submit" class="btn btn-outline-dark mr-2" style="margin-left: 68px; margin-top: 10px;">문장 만들기</button>
+                    <!-- <button type="reset" class="btn btn-secondary">취소</button> -->
+                    </div>
+                <!-- </div> -->
+            </div> 
+        </div>
+    </form>
+</div>
+<br><br><br><br><br><br><br><br><br><br>
+{% endblock %}

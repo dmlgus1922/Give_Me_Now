@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}장르별 가사 추천{% endblock %}
+
+{% block content %}
+    <div class="container-fluid pt-5 bg-dark text-white" id="info">
+        <h1>Give You Inspiration</h1>
+        <br>
+        <h4>
+            특정 장르의 노래 가사를 보고 영감을 얻으세요!
+        </h4>
+        <p>
+            많은 사람들에게 사랑을 받는 여러 노랫말이
+            당신의 작사에 도움을 주기 위해 기다립니다
+        </p>
+        <br>
+    </div>
+    <div class="wrap5" style="background-color: #ddd;">
+        <h4><strong>마음에 드는 표현이 있나요?</strong></h4>
+        <p>도움이 되면 좋겠네요!</p>
+    </div>
+    <div class="wrap5">
+        {% for i in result.split('\n') %}
+        <div><span>{{i.split('-')[0]}}</span></div>
+        <span>- {{i.split('-')[1]}}</span>
+        <br><br>
+        {% endfor %}
+        <hr>
+        <form action="/sentence" method="GET" enctype="multipart/form-data">
+        <!-- action에 routing 정보를, 전달하는 방식 method, file을 보낼 때는 enctype="multipart/form-data" 추가 -->
+            <button type="submit" class="btn btn-dark mr-2">재실행</button>
+        </form>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br>
+
+{% endblock %}

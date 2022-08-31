@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@terwanerik/scrolltrigger": "^1.0.5",
+    "keras": "^1.0.1"
+  }
+}

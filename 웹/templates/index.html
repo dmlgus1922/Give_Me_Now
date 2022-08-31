@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma" -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css', q=6) }}">
+    <!-- <link rel="stylesheet" type="text/css" href="/static/style.css?after"> -->
+    <style>
+    body,h1 {font-family: "linberB"}
+    body, html {height: 100%}
+    .bgimg {
+      background-image: url("/static/img/concert1.jpg");
+      min-height: 100%;
+      background-position: center;
+      background-size: cover;
+    }
+    </style>
+</head>
+
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+    <div class="w3-display-topleft w3-padding-large w3-xlarge" onclick="location.href='/intro';" style="cursor:pointer" >
+      GIVE ME NOW!
+    </div>
+    <div class="w3-display-middle" onclick="location.href='/intro';" style="cursor:pointer">
+      <h1 class="w3-jumbo w3-animate-top" style="color:#353535;">GIVE ME NOW!</h1>
+      <hr class="w3-border-grey" style="margin:auto;width:40%">
+      <p class="w3-large w3-center" style="color:#333333;">> 이동하기</p>
+    </div>
+</div>
+
+</body>
+</html>
