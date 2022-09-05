@@ -68,7 +68,7 @@ def makeLyric():
     else:
         sentence = request.form['sentence']
         l = request.form['length']
-        length = {'long':15, 'mid':10, 'short':5}
+        length = {'long':20, 'mid':13, 'short':8}
         n = length[l]
 
         result = sentence_generation(sentence, n)
