@@ -45,3 +45,9 @@
         2. LSTM이 바뀐 인풋으로 예측값 생성.
         3. 그 예측값을 앞선 인풋에 다시 더해줌.
         4. 또다시 예측을 하고 사용자가 설정한 길이만큼 반복.
+
+#### Team Happy Goose
+  ###### 김의현 dmlgus1922@naver.com
+  ###### 최희주 chj12365@gmail.com
+  ###### 하영진 hay8268@gmail.com
+  ###### 창연준 silvsk42@gmail.com
