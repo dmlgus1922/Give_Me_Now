@@ -46,6 +46,47 @@
         3. 그 예측값을 앞선 인풋에 다시 더해줌.
         4. 또다시 예측을 하고 사용자가 설정한 길이만큼 반복.
 
+<hr>
+
+### **실행**
+
+
+
+<p align="center">
+
+#### 1. 메인 페이지
+
+<img src="https://user-images.githubusercontent.com/103303021/208462879-8320dfe2-78f1-45c8-b492-2ec9ead9bcdc.gif" width="80%">
+
+</p>
+
+
+<p align="center">
+
+#### 2. 워드 클라우드
+
+<img src="https://user-images.githubusercontent.com/103303021/208465722-2a1268f6-fe74-46d9-b13c-90a280fe9472.gif" width="80%">
+
+</p>
+
+<p align="center">
+
+#### 3. 장르별 가사 추천
+
+<img src="https://user-images.githubusercontent.com/103303021/208467003-746e76c2-e61c-48fb-bb2d-412d5071c1b6.gif" width="80%">
+
+</p>
+
+<p align="center">
+
+#### 4. 가사 생성
+
+<img src="https://user-images.githubusercontent.com/103303021/208468880-5f8a3293-445f-4c89-947a-a8bbcb22dd13.gif" width="80%">
+
+</p>
+
+<hr>
+
 #### Team Happy Goose
   ###### 김의현 dmlgus1922@naver.com
   ###### 최희주 chj12365@gmail.com
